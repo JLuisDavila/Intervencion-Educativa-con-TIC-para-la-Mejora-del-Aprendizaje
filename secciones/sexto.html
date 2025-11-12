@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sexto de Primaria - Intervención Educativa con TIC</title>
-    <link rel="stylesheet" href="css/style.css?v=12">
+    <title>Sexto de Primaria</title>
+    <link rel="stylesheet" href="../css/style.css?v=14">
 </head>
 <body>
     <!-- CABECERA -->
@@ -14,53 +14,67 @@
 
     <!-- BARRA LATERAL -->
     <aside class="sidebar">
-        <h2>Secciones</h2>
+        <h2>Subsecciones</h2>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="sexto.html" class="active">Sexto de Primaria</a>
-            <a href="primero.html">Primero de Secundaria</a>
-            <a href="segundo.html">Segundo de Secundaria</a>
-            <a href="tercero.html">Tercero de Secundaria</a>
+            <a href="#planeacion">Planeación</a>
+            <a href="#implementacion">Implementación</a>
+            <a href="#documentacion">Documentación de materiales o recursos creados</a>
+            <a href="#evaluacion">Evaluación</a>
+            <a href="#reflexion">Reflexión</a>
             <hr>
-            <a href="readme.html" target="_blank">Acerca del Proyecto</a>
+            <a href="../index.html">Volver al inicio</a>
         </nav>
     </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="content">
+
         <section id="planeacion">
             <h2>Planeación</h2>
-            <textarea placeholder="Escribe aquí la planeación..."></textarea>
+            <p>Describe aquí la planeación de tu trabajo. Puedes incluir texto libre, ideas, objetivos o estrategias.</p>
         </section>
 
         <section id="implementacion">
             <h2>Implementación</h2>
-            <textarea placeholder="Describe cómo se implementó la estrategia..."></textarea>
+            <p>Redacta cómo se llevó a cabo la implementación. Incluye experiencias, actividades o reflexiones sobre el proceso.</p>
         </section>
 
         <section id="documentacion">
             <h2>Documentación de materiales o recursos creados</h2>
-            <textarea placeholder="Describe o pega código embed de recursos creados..."></textarea>
-            <p>Puedes incluir enlaces o código embebido (por ejemplo de YouTube, Canva, Genially, etc.).</p>
+            <p>Aquí puedes describir y enlazar tus materiales. También puedes insertar recursos externos.</p>
+
+            <!-- Ejemplo de código embed -->
+            <p>Ejemplo de inserción de video o página externa:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ysz5S6PUM-U" 
+                    title="Ejemplo" frameborder="0" allowfullscreen></iframe>
+
+            <!-- Ejemplo de enlace -->
+            <p>Consulta los materiales en el siguiente enlace: 
+                <a href="https://www.canva.com/" target="_blank">Ir a Canva</a>
+            </p>
         </section>
 
         <section id="evaluacion">
             <h2>Evaluación</h2>
-            <textarea placeholder="Describe la evaluación del proyecto..."></textarea>
-            <div class="upload-section">
-                <label for="fileUpload">Subir archivo o imagen:</label>
-                <input type="file" id="fileUpload" multiple>
-            </div>
+            <p>Aquí puedes incluir reflexiones, imágenes o archivos evaluativos.</p>
+
+            <!-- Ejemplo de imagen -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Students_in_a_classroom_in_Laos.jpg/640px-Students_in_a_classroom_in_Laos.jpg" 
+                 alt="Ejemplo de aula" style="width:100%; max-width:600px; border-radius:10px;">
+
+            <!-- Ejemplo de archivo descargable -->
+            <p><a href="../recursos/ejemplo.pdf" download>Descargar ejemplo de evaluación</a></p>
         </section>
 
         <section id="reflexion">
             <h2>Reflexión</h2>
-            <textarea placeholder="Escribe aquí tu reflexión final..."></textarea>
-            <div class="upload-section">
-                <label for="imageUpload">Agregar imágenes:</label>
-                <input type="file" id="imageUpload" multiple accept="image/*">
-            </div>
+            <p>Incluye tus reflexiones personales o pedagógicas sobre la experiencia. Puedes agregar imágenes si lo deseas.</p>
+
+            <!-- Ejemplo de imagen -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Teacher_giving_feedback.jpg/640px-Teacher_giving_feedback.jpg" 
+                 alt="Reflexión docente" style="width:100%; max-width:600px; border-radius:10px;">
         </section>
+
     </main>
 </body>
 </html>
