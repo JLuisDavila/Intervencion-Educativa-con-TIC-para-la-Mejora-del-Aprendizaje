@@ -1,342 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sexto de Primaria — Intervención TIC</title>
-  <link rel="stylesheet" href="../css/style.css?v=20">
-  <style>
-    /* Pequeños ajustes locales para pestañas y controles */
-    .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
-    .tab-btn {
-      background:#f3e9ff; border:1px solid #d6b3ff; color:#3b0066;
-      padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600;
-    }
-    .tab-btn.active { background:#d6b3ff; color:#fff; }
-    .panel { background:#fff; border-radius:10px; padding:16px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
-    .editor-toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-    .tool-btn {
-      padding:6px 10px; border-radius:6px; border:1px solid #cdb1ff; background:#faf4ff; color:#3b0066;
-      cursor:pointer; font-weight:600;
-    }
-    .tool-btn:hover{ background:#efe0ff;}
-    .editable { min-height:160px; padding:10px; border:1px dashed #e8d7ff; border-radius:8px; background:#fcfbff; }
-    .small-input { padding:6px 8px; border-radius:6px; border:1px solid #ddd; }
-    .item-list { margin-top:12px; display:flex;flex-direction:column; gap:8px; }
-    .item-list a { color:#4b0082; text-decoration:none; font-weight:600;}
-    .inline-row { display:flex; gap:8px; align-items:center; margin-bottom:8px; flex-wrap:wrap;}
-    .muted { color:#666; font-size:0.95rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexto de Primaria</title>
+    <link rel="stylesheet" href="../css/style.css?v=13">
 </head>
 <body>
-  <!-- header & sidebar come from global layout, we keep same structure -->
-  <header class="header">
-    <h1>Sexto de Primaria</h1>
-  </header>
+    <!-- CABECERA -->
+    <header class="header">
+        <h1>Intervención Educativa con TIC para la Mejora del Aprendizaje</h1>
+    </header>
 
-  <aside class="sidebar">
-    <h2>Secciones</h2>
-    <nav>
-      <a href="../index.html">Inicio</a>
-      <a href="sexto.html" style="background:#e2caff;color:white;border-radius:6px;">Sexto de Primaria</a>
-      <a href="primero-sec.html">Primero de Secundaria</a>
-      <a href="segundo-sec.html">Segundo de Secundaria</a>
-      <a href="tercero-sec.html">Tercero de Secundaria</a>
-      <hr>
-      <a href="../readme.html">Acerca del proyecto</a>
-    </nav>
-  </aside>
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar">
+        <h2>Secciones</h2>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="sexto.html" class="active">Sexto de Primaria</a>
+            <a href="primero-sec.html">Primero de Secundaria</a>
+            <a href="segundo-sec.html">Segundo de Secundaria</a>
+            <a href="tercero-sec.html">Tercero de Secundaria</a>
+            <hr>
+            <a href="../readme.html" target="_blank">Acerca del Proyecto</a>
+        </nav>
+    </aside>
 
-  <main class="content" id="main">
-    <section>
-      <h2>Panel de trabajo — Sexto de Primaria</h2>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content">
+        <h2>Sexto de Primaria</h2>
 
-      <!-- pestañas -->
-      <div class="tabs" role="tablist" aria-label="Secciones internas">
-        <button class="tab-btn active" data-tab="planeacion">Planeación</button>
-        <button class="tab-btn" data-tab="implementacion">Implementación</button>
-        <button class="tab-btn" data-tab="documentacion">Documentación</button>
-        <button class="tab-btn" data-tab="evaluacion">Evaluación</button>
-        <button class="tab-btn" data-tab="reflexion">Reflexión</button>
-      </div>
+        <section>
+            <h3>Planeación</h3>
+            <p>Puedes escribir aquí la planeación de tus actividades para sexto grado. Describe objetivos, competencias, propósitos y estrategias didácticas.</p>
+        </section>
 
-      <!-- PLANEACIÓN -->
-      <div id="planeacion" class="panel tab-panel" data-visible>
-        <div class="editor-toolbar">
-          <button class="tool-btn" data-action="bold">Negrita</button>
-          <button class="tool-btn" data-action="italic">Cursiva</button>
-          <button class="tool-btn" data-action="ul">Lista</button>
-          <button class="tool-btn" data-action="clear">Limpiar</button>
-        </div>
-        <div id="planeacion-editor" class="editable" contenteditable="true" aria-label="Editor de planeación"></div>
-        <div style="margin-top:10px;">
-          <button id="save-planeacion" class="tool-btn">Guardar Planeación</button>
-          <span class="muted"> (se guarda en el navegador)</span>
-        </div>
-      </div>
+        <section>
+            <h3>Implementación</h3>
+            <p>Redacta cómo implementaste las actividades en el aula, qué recursos tecnológicos empleaste y cómo respondieron los estudiantes.</p>
+        </section>
 
-      <!-- IMPLEMENTACIÓN -->
-      <div id="implementacion" class="panel tab-panel" style="display:none;">
-        <div class="editor-toolbar">
-          <button class="tool-btn" data-action-impl="bold">Negrita</button>
-          <button class="tool-btn" data-action-impl="italic">Cursiva</button>
-          <button class="tool-btn" data-action-impl="ul">Lista</button>
-          <button class="tool-btn" data-action-impl="clear">Limpiar</button>
-        </div>
-        <div id="implementacion-editor" class="editable" contenteditable="true" aria-label="Editor de implementación"></div>
-        <div style="margin-top:10px;">
-          <button id="save-implementacion" class="tool-btn">Guardar Implementación</button>
-          <span class="muted"> (se guarda en el navegador)</span>
-        </div>
-      </div>
+        <section>
+            <h3>Documentación de materiales o recursos creados</h3>
+            <p>Aquí puedes insertar texto, hipervínculos o código embed de recursos creados.</p>
+            <pre><code>&lt;iframe src="https://www.youtube.com/embed/videoid" width="400" height="250"&gt;&lt;/iframe&gt;</code></pre>
+            <p><a href="https://www.canva.com" target="_blank">Ejemplo de enlace a recurso externo</a></p>
+        </section>
 
-      <!-- DOCUMENTACIÓN (texto + embed + links) -->
-      <div id="documentacion" class="panel tab-panel" style="display:none;">
-        <div style="margin-bottom:8px;">
-          <input id="doc-link-url" class="small-input" placeholder="URL del vínculo (https://...)" />
-          <input id="doc-link-text" class="small-input" placeholder="Texto del vínculo" />
-          <button id="add-link" class="tool-btn">Añadir enlace</button>
-        </div>
+        <section>
+            <h3>Evaluación</h3>
+            <p>Incluye tus criterios e instrumentos de evaluación. Puedes añadir imágenes o enlaces a archivos descargables.</p>
+            <img src="../images/ejemplo-evaluacion.jpg" alt="Ejemplo de evaluación" style="max-width:100%;border-radius:8px;">
+            <p><a href="../docs/guia-evaluacion.pdf" download>Descargar guía de evaluación</a></p>
+        </section>
 
-        <div style="margin-bottom:8px;">
-          <input id="embed-src" class="small-input" placeholder="URL para embed (iframe) — p. ej. https://www.youtube.com/embed/ID" />
-          <button id="add-embed" class="tool-btn">Añadir embed</button>
-        </div>
-
-        <div style="margin-bottom:8px;">
-          <input id="doc-note" class="small-input" placeholder="Redactar nota o descripción..." />
-          <button id="add-doc-note" class="tool-btn">Añadir nota</button>
-        </div>
-
-        <div class="item-list" id="doc-items" aria-live="polite"></div>
-
-        <div style="margin-top:10px;">
-          <button id="save-documentacion" class="tool-btn">Guardar Documentación</button>
-          <span class="muted"> (se guarda en el navegador)</span>
-        </div>
-      </div>
-
-      <!-- EVALUACIÓN (texto + imágenes + archivos descargables) -->
-      <div id="evaluacion" class="panel tab-panel" style="display:none;">
-        <div style="margin-bottom:10px;">
-          <textarea id="evaluacion-text" class="editable" placeholder="Escribe observaciones o resultados..." style="min-height:120px;"></textarea>
-        </div>
-
-        <div class="inline-row">
-          <input id="eval-img-url" class="small-input" placeholder="URL imagen (https://...)" />
-          <button id="add-eval-image" class="tool-btn">Añadir imagen</button>
-        </div>
-
-        <div class="inline-row">
-          <input id="eval-file-url" class="small-input" placeholder="URL archivo descargable (https://...)" />
-          <input id="eval-file-name" class="small-input" placeholder="Nombre del archivo" />
-          <button id="add-eval-file" class="tool-btn">Añadir archivo</button>
-        </div>
-
-        <div id="evaluacion-items" class="item-list"></div>
-
-        <div style="margin-top:10px;">
-          <button id="save-evaluacion" class="tool-btn">Guardar Evaluación</button>
-          <span class="muted"> (se guarda en el navegador)</span>
-        </div>
-      </div>
-
-      <!-- REFLEXIÓN (texto + imágenes) -->
-      <div id="reflexion" class="panel tab-panel" style="display:none;">
-        <div style="margin-bottom:10px;">
-          <div id="reflexion-editor" class="editable" contenteditable="true" placeholder="Escribe tu reflexión..."></div>
-        </div>
-
-        <div class="inline-row">
-          <input id="ref-img-url" class="small-input" placeholder="URL imagen (https://...)" />
-          <button id="add-ref-image" class="tool-btn">Añadir imagen</button>
-        </div>
-
-        <div id="reflexion-items" class="item-list"></div>
-
-        <div style="margin-top:10px;">
-          <button id="save-reflexion" class="tool-btn">Guardar Reflexión</button>
-          <span class="muted"> (se guarda en el navegador)</span>
-        </div>
-      </div>
-
-    </section>
-  </main>
-
-  <script>
-    /***** CONFIG *****/
-    const PAGE_KEY = 'page_sexto_v1'; // cambia la clave si duplicas el archivo
-    const tabs = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
-
-    // cambiar pestaña
-    tabs.forEach(btn=>{
-      btn.addEventListener('click', ()=> {
-        tabs.forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
-        const target = btn.dataset.tab;
-        panels.forEach(p=>{
-          p.style.display = p.id === target ? 'block' : 'none';
-        });
-      });
-    });
-
-    /* --- Helpers para almacenamiento --- */
-    function saveState(key,obj){
-      localStorage.setItem(PAGE_KEY + '_' + key, JSON.stringify(obj));
-    }
-    function loadState(key, fallback){
-      const raw = localStorage.getItem(PAGE_KEY + '_' + key);
-      return raw ? JSON.parse(raw) : fallback;
-    }
-
-    /* ========== PLANEACIÓN ========== */
-    const planeEditor = document.getElementById('planeacion-editor');
-    document.getElementById('save-planeacion').addEventListener('click', ()=>{
-      saveState('planeacion', {html: planeEditor.innerHTML});
-      alert('Planeación guardada.');
-    });
-    // toolbar
-    document.querySelectorAll('[data-action]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const act = btn.dataset.action;
-        if(act==='bold'){ document.execCommand('bold'); }
-        else if(act==='italic'){ document.execCommand('italic'); }
-        else if(act==='ul'){ document.execCommand('insertUnorderedList'); }
-        else if(act==='clear'){ planeEditor.innerHTML=''; }
-      });
-    });
-
-    /* ========== IMPLEMENTACIÓN ========== */
-    const implEditor = document.getElementById('implementacion-editor');
-    document.getElementById('save-implementacion').addEventListener('click', ()=>{
-      saveState('implementacion', {html: implEditor.innerHTML});
-      alert('Implementación guardada.');
-    });
-    document.querySelectorAll('[data-action-impl]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const a = btn.dataset.actionImpl || btn.dataset.actionImpl;
-        const act = btn.dataset.actionImpl || btn.dataset.action;
-        if(btn.dataset.actionImpl==='bold'){ document.execCommand('bold'); }
-        else if(btn.dataset.actionImpl==='italic'){ document.execCommand('italic'); }
-        else if(btn.dataset.actionImpl==='ul'){ document.execCommand('insertUnorderedList'); }
-        else if(btn.dataset.actionImpl==='clear'){ implEditor.innerHTML=''; }
-      });
-    });
-
-    /* ========== DOCUMENTACIÓN ========== */
-    const docItems = document.getElementById('doc-items');
-    document.getElementById('add-link').addEventListener('click', ()=>{
-      const url = document.getElementById('doc-link-url').value.trim();
-      const text = document.getElementById('doc-link-text').value.trim() || url;
-      if(!url) return alert('Introduce una URL.');
-      const a = document.createElement('a');
-      a.href = url; a.target='_blank'; a.textContent = text;
-      const div = document.createElement('div'); div.appendChild(a);
-      docItems.prepend(div);
-      document.getElementById('doc-link-url').value=''; document.getElementById('doc-link-text').value='';
-      saveDocState();
-    });
-
-    document.getElementById('add-embed').addEventListener('click', ()=>{
-      const src = document.getElementById('embed-src').value.trim();
-      if(!src) return alert('Introduce la URL de embed (ej. https://www.youtube.com/embed/ID)');
-      const wrap = document.createElement('div');
-      wrap.innerHTML = `<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"><iframe src="${src}" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div>`;
-      docItems.prepend(wrap);
-      document.getElementById('embed-src').value='';
-      saveDocState();
-    });
-
-    document.getElementById('add-doc-note').addEventListener('click', ()=>{
-      const note = document.getElementById('doc-note').value.trim();
-      if(!note) return;
-      const p = document.createElement('p'); p.textContent = note;
-      docItems.prepend(p);
-      document.getElementById('doc-note').value='';
-      saveDocState();
-    });
-
-    function saveDocState(){
-      // serializar items (simple: guardar innerHTML)
-      saveState('documentacion', {html: docItems.innerHTML});
-    }
-    document.getElementById('save-documentacion').addEventListener('click', ()=>{
-      saveDocState();
-      alert('Documentación guardada.');
-    });
-
-    /* ========== EVALUACIÓN ========== */
-    const evalItems = document.getElementById('evaluacion-items');
-    document.getElementById('add-eval-image').addEventListener('click', ()=>{
-      const url = document.getElementById('eval-img-url').value.trim();
-      if(!url) return alert('Introduce URL de la imagen.');
-      const img = document.createElement('img'); img.src=url; img.style.maxWidth='200px'; img.style.borderRadius='6px';
-      const wrap = document.createElement('div'); wrap.appendChild(img);
-      evalItems.prepend(wrap);
-      document.getElementById('eval-img-url').value='';
-      saveEvalState();
-    });
-
-    document.getElementById('add-eval-file').addEventListener('click', ()=>{
-      const url = document.getElementById('eval-file-url').value.trim();
-      const name = document.getElementById('eval-file-name').value.trim() || 'Descargar';
-      if(!url) return alert('Introduce URL del archivo.');
-      const a = document.createElement('a'); a.href=url; a.textContent=name; a.download='';
-      const div = document.createElement('div'); div.appendChild(a);
-      evalItems.prepend(div);
-      document.getElementById('eval-file-url').value=''; document.getElementById('eval-file-name').value='';
-      saveEvalState();
-    });
-
-    function saveEvalState(){
-      saveState('evaluacion', {
-        text: document.getElementById('evaluacion-text').value,
-        html: evalItems.innerHTML
-      });
-    }
-    document.getElementById('save-evaluacion').addEventListener('click', ()=>{ saveEvalState(); alert('Evaluación guardada.'); });
-
-    /* ========== REFLEXIÓN ========== */
-    const refItems = document.getElementById('reflexion-items');
-    document.getElementById('add-ref-image').addEventListener('click', ()=>{
-      const url = document.getElementById('ref-img-url').value.trim();
-      if(!url) return alert('Introduce URL de la imagen.');
-      const img = document.createElement('img'); img.src=url; img.style.maxWidth='220px'; img.style.borderRadius='6px';
-      const wrap = document.createElement('div'); wrap.appendChild(img);
-      refItems.prepend(wrap);
-      document.getElementById('ref-img-url').value='';
-      saveRefState();
-    });
-    function saveRefState(){ saveState('reflexion', {html: document.getElementById('reflexion-editor').innerHTML, gallery: refItems.innerHTML}); }
-    document.getElementById('save-reflexion').addEventListener('click', ()=>{ saveRefState(); alert('Reflexión guardada.'); });
-
-    /* ========== Carga inicial (si hay guardado) ========== */
-    // Planeacion
-    const pState = loadState('planeacion', null);
-    if(pState && pState.html) planeEditor.innerHTML = pState.html;
-    // Implementacion
-    const iState = loadState('implementacion', null);
-    if(iState && iState.html) implEditor.innerHTML = iState.html;
-    // Documentacion
-    const dState = loadState('documentacion', null);
-    if(dState && dState.html) docItems.innerHTML = dState.html;
-    // Evaluacion
-    const eState = loadState('evaluacion', null);
-    if(eState){
-      document.getElementById('evaluacion-text').value = eState.text || '';
-      evalItems.innerHTML = eState.html || '';
-    }
-    // Reflexion
-    const rState = loadState('reflexion', null);
-    if(rState){
-      document.getElementById('reflexion-editor').innerHTML = rState.html || '';
-      refItems.innerHTML = rState.gallery || '';
-    }
-
-    /* opcional: limpiar storage (descomenta para pruebas) */
-    // localStorage.removeItem(PAGE_KEY + '_planeacion');
-
-  </script>
+        <section>
+            <h3>Reflexión</h3>
+            <p>Describe los aprendizajes obtenidos, los desafíos enfrentados y propuestas de mejora. Puedes acompañar tu reflexión con imágenes o gráficos.</p>
+            <img src="../images/reflexion.jpg" alt="Reflexión docente" style="max-width:100%;border-radius:8px;">
+        </section>
+    </main>
 </body>
 </html>
