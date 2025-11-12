@@ -15,18 +15,18 @@ body {
     width: 100%;
     background-color: #4b0082; /* morado quemado */
     color: white;
-    padding: 15px;
+    padding: 15px 0;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
 }
 
 /* ====== Barra lateral ====== */
 .sidebar {
     position: fixed;
-    top: 70px;
+    top: 70px; /* separación de la cabecera */
     left: 0;
     width: 240px;
     background-color: #d8b8ea; /* lila claro */
@@ -40,34 +40,37 @@ body {
     color: #4b0082;
     text-align: center;
     font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
 .sidebar nav a {
     display: block;
     text-decoration: none;
     color: #3b0066;
-    padding: 10px;
-    margin: 6px 0;
+    padding: 12px;
+    margin: 10px 0;
     border-radius: 6px;
-    background-color: #f2e6ff;
-    transition: background-color 0.2s;
+    background-color: #f3e9ff;
+    transition: background-color 0.25s;
+    text-align: center;
+    font-weight: 500;
 }
 
 .sidebar nav a:hover {
-    background-color: #e6ccff;
+    background-color: #e2caff;
 }
 
-/* Separadores */
 .sidebar hr {
     border: none;
     border-top: 1px solid #b88ed2;
-    margin: 8px 0;
+    margin: 15px 0;
 }
 
 /* ====== Contenido principal ====== */
 .content {
     margin-left: 260px;
-    padding: 100px 40px 40px 40px;
+    margin-top: 110px; /* evita solapamiento con cabecera */
+    padding: 20px 40px 60px 40px;
     max-width: 900px;
 }
 
@@ -75,16 +78,22 @@ body {
     color: #4b0082;
     border-bottom: 2px solid #cba6e0;
     padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
+/* ====== Galería de imágenes ====== */
 .image-gallery {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .image-gallery img {
-    width: 30%;
+    width: 31%;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    object-fit: cover;
+    max-height: 200px;
 }
