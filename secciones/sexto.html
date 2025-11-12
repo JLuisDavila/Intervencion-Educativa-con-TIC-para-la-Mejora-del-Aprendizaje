@@ -3,61 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sexto de Primaria</title>
-    <link rel="stylesheet" href="../css/style.css?v=15">
+    <title>Sexto de Primaria - Intervención Educativa con TIC</title>
+    <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
     <!-- CABECERA -->
     <header class="header">
-        <h1>Intervención Educativa con TIC para la Mejora del Aprendizaje</h1>
+        <h1>Sexto de Primaria</h1>
     </header>
 
     <!-- BARRA LATERAL -->
     <aside class="sidebar">
         <h2>Secciones</h2>
         <nav>
-            <a href="../index.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="sexto.html" class="active">Sexto de Primaria</a>
-            <a href="primero-sec.html">Primero de Secundaria</a>
-            <a href="segundo-sec.html">Segundo de Secundaria</a>
-            <a href="tercero-sec.html">Tercero de Secundaria</a>
+            <a href="primero.html">Primero de Secundaria</a>
+            <a href="segundo.html">Segundo de Secundaria</a>
+            <a href="tercero.html">Tercero de Secundaria</a>
             <hr>
-            <a href="../readme.html" target="_blank">Acerca del Proyecto</a>
+            <a href="readme.html" target="_blank">Acerca del Proyecto</a>
         </nav>
     </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="content">
-        <h2>Sexto de Primaria</h2>
-
-        <section>
-            <h3>Planeación</h3>
-            <p>Aquí puedes redactar la planeación de tus actividades: objetivos, competencias, estrategias didácticas y recursos tecnológicos.</p>
+        <section id="planeacion">
+            <h2>Planeación</h2>
+            <textarea placeholder="Escribe aquí la planeación..."></textarea>
         </section>
 
-        <section>
-            <h3>Implementación</h3>
-            <p>Describe cómo llevaste a cabo la intervención educativa, qué herramientas TIC utilizaste y cómo respondieron los estudiantes.</p>
+        <section id="implementacion">
+            <h2>Implementación</h2>
+            <textarea placeholder="Describe cómo se implementó la estrategia..."></textarea>
         </section>
 
-        <section>
-            <h3>Documentación de materiales o recursos creados</h3>
-            <p>Agrega aquí tus recursos, código embed o enlaces externos.</p>
-            <pre><code>&lt;iframe src="https://www.youtube.com/embed/videoid" width="400" height="250"&gt;&lt;/iframe&gt;</code></pre>
-            <p><a href="https://www.canva.com" target="_blank">Ejemplo de enlace a recurso externo</a></p>
+        <section id="documentacion">
+            <h2>Documentación de materiales o recursos creados</h2>
+            <textarea placeholder="Describe o pega código embed de recursos creados..."></textarea>
+            <p>Puedes incluir enlaces o código embebido (por ejemplo de YouTube, Canva, Genially, etc.).</p>
         </section>
 
-        <section>
-            <h3>Evaluación</h3>
-            <p>Incluye tus criterios e instrumentos de evaluación. Puedes añadir imágenes o archivos descargables.</p>
-            <img src="../images/ejemplo-evaluacion.jpg" alt="Ejemplo de evaluación" style="max-width:100%;border-radius:8px;">
-            <p><a href="../docs/guia-evaluacion.pdf" download>Descargar guía de evaluación</a></p>
+        <section id="evaluacion">
+            <h2>Evaluación</h2>
+            <textarea placeholder="Describe la evaluación del proyecto..."></textarea>
+            <div class="upload-section">
+                <label for="fileUpload">Subir archivo o imagen:</label>
+                <input type="file" id="fileUpload" multiple>
+            </div>
         </section>
 
-        <section>
-            <h3>Reflexión</h3>
-            <p>Expón los resultados obtenidos, aprendizajes logrados y aspectos a mejorar.</p>
-            <img src="../images/reflexion.jpg" alt="Reflexión docente" style="max-width:100%;border-radius:8px;">
+        <section id="reflexion">
+            <h2>Reflexión</h2>
+            <textarea placeholder="Escribe aquí tu reflexión final..."></textarea>
+            <div class="upload-section">
+                <label for="imageUpload">Agregar imágenes:</label>
+                <input type="file" id="imageUpload" multiple accept="image/*">
+            </div>
         </section>
     </main>
 </body>
