@@ -271,82 +271,81 @@
         significativas y discusiones auténticas que enriquecieron el proceso formativo.
     </p>
 
-            <h3>Evidencias visuales de las actividades realizadas</h3>
+      <h3>Evidencias visuales de las actividades realizadas</h3>
 
-<div class="evidencias-galeria-simple">
+<div class="evidencias-galeria-simple lightbox-gallery">
 
     <!-- Imagen 1 -->
     <div class="evidencia-item">
-        <img src="../img/lmsreglas.png" alt="Evidencia 1">
+        <img src="../img/lmsreglas.png" alt="Evidencia 1" class="zoomable">
         <p class="evidencia-titulo">Indicaciones para actividad con <em>deck.toys</em></p>
     </div>
 
     <!-- Imagen 2 -->
     <div class="evidencia-item">
-        <img src="../img/lmsreglas2.png" alt="Evidencia 2">
-        <p class="evidencia-titulo">Indicaciones para tarea de redacción de reglas previa a la integración del <em>Wakelet</em></p>
+        <img src="../img/lmsreglas2.png" alt="Evidencia 2" class="zoomable">
+        <p class="evidencia-titulo">Indicaciones para tarea de redacción de reglas previa al <em>Wakelet</em></p>
     </div>
 
     <!-- Imagen 3 -->
     <div class="evidencia-item">
-        <img src="../img/lmsfunciones.png" alt="Evidencia 3">
-        <p class="evidencia-titulo">Indicaciones para la actividad sobre las funciones del cuento previa a la integración en <em>Canva</em></p>
+        <img src="../img/lmsfunciones.png" alt="Evidencia 3" class="zoomable">
+        <p class="evidencia-titulo">Indicaciones para actividad sobre funciones del cuento</p>
     </div>
 
 </div>
 
 
-            <h3>Evidencias de la participación y respuesta de los estudiantes</h3>
+<h3>Evidencias de la participación y respuesta de los estudiantes</h3>
 
 <!-- GRUPO 1 -->
 <div class="evidencias-grupo">
-    <div class="evidencias-galeria-simple">
+    <div class="evidencias-galeria-simple lightbox-gallery">
         <div class="evidencia-item">
-            <img src="../img/ética1.jpeg" alt="Evidencia 1">
+            <img src="../img/ética1.jpeg" alt="Evidencia 1" class="zoomable">
         </div>
         <div class="evidencia-item">
-            <img src="../img/ética2.png" alt="Evidencia 2">
+            <img src="../img/ética2.png" alt="Evidencia 2" class="zoomable">
         </div>
         <div class="evidencia-item">
-            <img src="../img/ética3.jpg" alt="Evidencia 3">
+            <img src="../img/ética3.jpg" alt="Evidencia 3" class="zoomable">
         </div>
     </div>
-    <p class="evidencia-titulo-grupo">Evidencias de trabajo en <em>dec.toys</em></p>
+    <p class="evidencia-titulo-grupo">Evidencias de trabajo en <em>deck.toys</em></p>
 </div>
 
 <!-- GRUPO 2 -->
 <div class="evidencias-grupo">
-    <div class="evidencias-galeria-simple">
+    <div class="evidencias-galeria-simple lightbox-gallery">
         <div class="evidencia-item">
-            <img src="../img/regla1.jpeg" alt="Evidencia 4">
+            <img src="../img/regla1.jpeg" alt="Evidencia 4" class="zoomable">
         </div>
         <div class="evidencia-item">
-            <img src="../img/regla2.png" alt="Evidencia 5">
+            <img src="../img/regla2.png" alt="Evidencia 5" class="zoomable">
         </div>
         <div class="evidencia-item">
-            <img src="../img/regla3.jpeg" alt="Evidencia 6">
+            <img src="../img/regla3.jpeg" alt="Evidencia 6" class="zoomable">
         </div>
     </div>
-    <p class="evidencia-titulo-grupo">Evidencias de trabajo en redacción de reglas previas al uso de <em>Wakelet</em></p>
+    <p class="evidencia-titulo-grupo">Evidencias de redacción de reglas previas a <em>Wakelet</em></p>
 </div>
 
 <!-- GRUPO 3 -->
 <div class="evidencias-grupo">
-    <div class="evidencias-galeria-simple">
+    <div class="evidencias-galeria-simple lightbox-gallery">
         <div class="evidencia-item">
-            <img src="../img/funciones1.png" alt="Evidencia 7">
+            <img src="../img/funciones1.png" alt="Evidencia 7" class="zoomable">
         </div>
         <div class="evidencia-item">
-            <img src="../img/funciones2.jpeg" alt="Evidencia 8">
+            <img src="../img/funciones2.jpeg" alt="Evidencia 8" class="zoomable">
         </div>
         <div class="evidencia-item">
-            <img src="../img/funciones3.png" alt="Evidencia 9">
+            <img src="../img/funciones3.png" alt="Evidencia 9" class="zoomable">
         </div>
     </div>
-    <p class="evidencia-titulo-grupo">Evidencias de trabajo de organización previo a la integración en <em>Canva</em></p>
+    <p class="evidencia-titulo-grupo">Evidencias de organización previa a Canva</p>
 </div>
 
-        </section>
 
         <!-- ===================== DOCUMENTACIÓN ===================== -->
         <section id="documentacion">
@@ -704,6 +703,35 @@
 
 
     </main>
+<!-- LIGHTBOX -->
+<div id="lightbox" style="
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;">
+    <img id="lightbox-img" style="
+        max-width:90%;
+        max-height:90%;
+        border-radius:14px;
+        box-shadow:0 0 20px rgba(255,255,255,0.3);">
+</div>
+
+<script>
+document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').style.display = 'flex';
+    });
+});
+
+document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+});
+</script>
 
 </body>
 </html>
