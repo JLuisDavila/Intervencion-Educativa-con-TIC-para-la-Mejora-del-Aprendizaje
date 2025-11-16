@@ -164,13 +164,13 @@
     <div class="evidencias-galeria-simple">
     <div class="evidencia-item">
     <a href="https://padlet.com/uncorreoprovisional/podcast-episodio-3-para-qu-nos-sirven-los-reglamentos-1gvulkr34d51kjt0" target="_blank">
-        <img src="../img/Padlet.png" alt="Evidencia 1">
+        <img src="../img/Padlet.png" alt="Evidencia 1" class="zoomable">
     </a>
     <p class="evidencia-titulo">Modelo de Padlet usado como escaleta</p>
 </div>
 
         <div class="evidencia-item">
-            <img src="../img/Bandlab.png" alt="Evidencia 2">
+            <img src="../img/Bandlab.png" alt="Evidencia 2" class="zoomable">
             <p class="evidencia-titulo">Interfaz de grabación en Bandlab del primer episodio</p>
         </div>
     </div>
@@ -192,17 +192,17 @@
     <div class="evidencias-galeria-simple">
 
     <div class="evidencia-item">
-        <img src="../img/Lista.png" alt="Lista">
+        <img src="../img/Lista.png" alt="Lista" class="zoomable">
         <p class="evidencia-titulo">Lista recuperada de la organización de temas y alumnos</p>
     </div>
 
     <div class="evidencia-item">
-        <img src="../img/1000431305.jpg" alt="Participación alumno 1">
+        <img src="../img/1000431305.jpg" alt="Participación alumno 1" class="zoomable">
         <p class="evidencia-titulo">Discusión grupal guiada sobre el tema del primer episodio</p>
     </div>
 
     <div class="evidencia-item">
-        <img src="../img/1000431304.jpg" alt="Participación alumno 2">
+        <img src="../img/1000431304.jpg" alt="Participación alumno 2" class="zoomable">
         <p class="evidencia-titulo">Grabación del primer episodio</p>
     </div>
 
@@ -346,6 +346,35 @@
 
 
     </main>
+<!-- LIGHTBOX -->
+<div id="lightbox" style="
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;">
+    <img id="lightbox-img" style="
+        max-width:90%;
+        max-height:90%;
+        border-radius:14px;
+        box-shadow:0 0 20px rgba(255,255,255,0.3);">
+</div>
+
+<script>
+document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').style.display = 'flex';
+    });
+});
+
+document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+});
+</script>
 
 </body>
 </html>
