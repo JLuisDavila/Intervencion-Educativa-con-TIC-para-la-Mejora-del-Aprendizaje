@@ -367,3 +367,22 @@ a:hover {
     height: auto;
     border-radius: 12px;
 }
+/* ====== FORZAR PDF A ANCHO COMPLETO ====== */
+
+.pdf-section {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Evita que el grid padre afecte a los PDF */
+.pdf-section iframe,
+.pdf-section .pdf-viewer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Evita que .evidencias-galeria-simple afecte PDFs por error */
+.pdf-section * {
+    grid-column: 1 / -1 !important;
+}
