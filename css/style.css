@@ -443,3 +443,12 @@ a:hover {
     border: 1px solid #ccc;
     display: block;             /* elimina efectos de flex/grid que reduzcan altura */
 }
+
+/* Colócalo en style.css o en un <style> dentro de primero.html */
+#planeacion,
+#implementacion,
+#documentacion,
+#evaluacion,
+#reflexion {
+    scroll-margin-top: 120px; /* ajusta según la altura de tu header */
+}
