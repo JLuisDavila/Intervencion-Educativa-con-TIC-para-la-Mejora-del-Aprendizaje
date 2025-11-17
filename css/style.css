@@ -338,3 +338,32 @@ a:hover {
 #documentacion .evidencias-galeria-simple {
     display: block !important;
 }
+/* =============================
+   REPARACIÓN DEL GRID DE EVIDENCIAS
+   ============================= */
+.evidencias-galeria-simple {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Evita que los PDF se metan dentro del grid */
+.pdf-section,
+.pdf-section iframe {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Asegurar que .evidencia-item no se bloquee */
+.evidencia-item {
+    display: block;
+    text-align: center;
+}
+
+.evidencia-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
