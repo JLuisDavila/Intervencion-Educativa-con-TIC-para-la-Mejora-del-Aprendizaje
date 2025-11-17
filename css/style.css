@@ -302,3 +302,21 @@ a:hover {
     display: block;
 }
 
+/* --- Forzar que los PDF se muestren en bloque, no en columnas --- */
+
+.pdf-section {
+    width: 100% !important;
+    display: block !important;
+    margin: 30px 0 !important;
+}
+
+.pdf-section iframe {
+    width: 100% !important;
+    display: block !important;
+}
+
+.evidencias-galeria-simple,
+.evidencia-item {
+    display: block !important;
+    width: 100% !important;
+}
