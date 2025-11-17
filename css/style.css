@@ -1,6 +1,4 @@
-/* ============================
-   ESTILO GENERAL
-============================ */
+/* ==== ESTILO GENERAL ==== */
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
@@ -9,15 +7,13 @@ body {
     display: flex;
 }
 
-/* ============================
-   CABECERA
-============================ */
+/* ==== CABECERA ==== */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #6B1E8B;
+    background-color: #6B1E8B; /* morado quemado */
     color: #fff;
     text-align: center;
     padding: 1.5rem 1rem;
@@ -25,30 +21,39 @@ body {
     z-index: 10;
 }
 
-/* ============================
-   BARRA LATERAL
-============================ */
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* ==== BARRA LATERAL ==== */
 .sidebar {
     position: fixed;
     top: 90px;
     left: 0;
     width: 240px;
     height: calc(100% - 90px);
-    background-color: #C9A0DC;
+    background-color: #C9A0DC; /* lila claro */
     padding: 1rem;
     overflow-y: auto;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #3A0CA3; /* un lila más oscuro para texto */
 }
 
 .sidebar nav a {
     display: block;
     text-decoration: none;
     color: #3A0CA3;
-    background-color: #EED8F1;
+    background-color: #EED8F1; /* fondo más claro de lila */
     padding: 0.6rem 0.8rem;
     margin-bottom: 0.5rem;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .sidebar nav a:hover {
@@ -56,9 +61,7 @@ body {
     color: #fff;
 }
 
-/* ============================
-   CONTENIDO
-============================ */
+/* ==== CONTENIDO ==== */
 .content {
     text-align: justify;
     margin-left: 260px;
@@ -66,33 +69,161 @@ body {
     max-width: 900px;
 }
 
-.titulo-proyecto {
-    text-align: center;
-    font-size: 2.2rem;
-    margin: 20px 0 30px 0;
-    font-weight: 700;
-    color: #4b0f6b;
+.content h2 {
+    color: #6B1E8B;
+    border-bottom: 2px solid #9F4AA4;
+    padding-bottom: 0.3rem;
 }
 
-/* ============================
-   IMÁGENES GENERALES
-============================ */
+.content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* ==== IMÁGENES ==== */
 .content img {
     width: 100%;
+    max-width: 700px;
     border-radius: 10px;
     margin: 1rem 0;
     display: block;
 }
 
-/* ============================
-   GALERÍA GRID (3 columnas)
-============================ */
+/* ==== ENLACES ==== */
+a {
+    color: #6B1E8B;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 150px;
+    }
+}
+
+/* === Fila de imágenes en la introducción === */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;          /* separación entre imágenes */
+    margin-top: 30px;   /* espacio respecto al texto */
+}
+
+.image-row img {
+    width: 30%;         /* todas del mismo tamaño */
+    max-width: 280px;   /* evita que crezcan demasiado */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+}
+
+/* ---- EVIDENCIAS SIMPLES ---- */
+
+.evidencias-galeria-simple {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.evidencia-item {
+    width: 48%;
+    text-align: center;
+}
+
+.evidencia-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.evidencia-titulo {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #4b007d;
+}
+
+.pdf-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 430px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* ---- EVIDENCIAS SIMPLES ---- */
+
+.evidencias-galeria-simple {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.evidencia-item {
+    width: 48%;
+    text-align: center;
+}
+
+.evidencia-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.evidencia-titulo {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #4b007d;
+}
+
+.pdf-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 430px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.titulo-proyecto {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #4b0f6b; /* Morado quemado */
+}
+
 .evidencias-galeria-simple {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin: 25px 0;
-    width: 100%;
+    gap: 18px;
+    margin-bottom: 30px;
 }
 
 .evidencia-item {
@@ -101,7 +232,7 @@ body {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    transition: 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .evidencia-item:hover {
@@ -117,80 +248,141 @@ body {
     cursor: zoom-in;
 }
 
-.evidencia-titulo {
-    margin-top: 8px;
-    font-weight: 600;
+.evidencia-titulo,
+.evidencia-titulo-grupo {
+    margin-top: 10px;
+    font-size: 0.95rem;
     color: #4a266a;
+    font-weight: 600;
+    text-align: center;
 }
+<style>
+    table.definidas {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: #ffffff;
+        font-size: 0.95rem;
+    }
 
-/* ============================
-   PDF A ANCHO COMPLETO
-============================ */
+    table.definidas th,
+    table.definidas td {
+        border: 2px solid #b28bff; /* Bordes más visibles */
+        padding: 8px 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    table.definidas th {
+        background: #e9ddff;
+        font-weight: bold;
+    }
+
+    table.definidas tr:nth-child(even) {
+        background: #f7f2ff;
+    }
+</style>
+
 .pdf-section {
-    width: 100%;
-    display: block;
-    margin: 30px 0;
+    margin-top: 25px;
+    margin-bottom: 40px;
 }
 
 .pdf-section .evidencia-titulo {
-    text-align: left;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .pdf-viewer {
-    display: block;
     width: 100%;
     height: 500px;
-    border-radius: 12px;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    border-radius: 12px;
+    display: block;
 }
 
-/* ============================
-   ZOOM EN IMÁGENES
-============================ */
-#image-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+/* --- Forzar que los PDF se muestren en bloque, no en columnas --- */
+
+.pdf-section {
+    width: 100% !important;
+    display: block !important;
+    margin: 30px 0 !important;
+}
+
+.pdf-section iframe {
+    width: 100% !important;
+    display: block !important;
+}
+
+.evidencias-galeria-simple,
+.evidencia-item {
+    display: block !important;
+    width: 100% !important;
+}
+/* SOLO afecta los PDF dentro de la sección Documentación de TERCERO */
+#documentacion .pdf-section {
+    width: 100% !important;
+    display: block !important;
+    margin: 30px 0 !important;
+}
+
+/* Evita que grids/flex de la página afecten a esa sección */
+#documentacion .pdf-section iframe {
+    width: 100% !important;
+    height: 500px !important;
+    display: block !important;
+}
+
+/* Evita que la galería simple convierta esos PDF en columnas */
+#documentacion .evidencias-galeria-simple {
+    display: block !important;
+}
+/* =============================
+   REPARACIÓN DEL GRID DE EVIDENCIAS
+   ============================= */
+.evidencias-galeria-simple {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 20px 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
 }
 
-#image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #000;
-    animation: zoomIn 0.3s ease;
+/* Evita que los PDF se metan dentro del grid */
+.pdf-section,
+.pdf-section iframe {
+    display: block !important;
+    width: 100% !important;
 }
 
-@keyframes zoomIn {
-    from { transform: scale(0.6); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+/* Asegurar que .evidencia-item no se bloquee */
+.evidencia-item {
+    display: block;
+    text-align: center;
 }
 
-/* ============================
-   RESPONSIVE
-============================ */
-@media (max-width: 768px) {
-    .evidencias-galeria-simple {
-        grid-template-columns: repeat(1, 1fr);
-    }
+.evidencia-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+/* ====== FORZAR PDF A ANCHO COMPLETO ====== */
 
-    .sidebar {
-        width: 100%;
-        position: relative;
-    }
+.pdf-section {
+    display: block !important;
+    width: 100% !important;
+}
 
-    .content {
-        margin-left: 0;
-        padding-top: 160px;
-    }
+/* Evita que el grid padre afecte a los PDF */
+.pdf-section iframe,
+.pdf-section .pdf-viewer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Evita que .evidencias-galeria-simple afecte PDFs por error */
+.pdf-section * {
+    grid-column: 1 / -1 !important;
 }
