@@ -452,3 +452,11 @@ a:hover {
 #reflexion {
     scroll-margin-top: 120px; /* ajusta según la altura de tu header */
 }
+
+#planeacion,
+#implementacion,
+#documentacion,
+#evaluacion,
+#reflexion {
+    scroll-margin-top: 120px;
+}
