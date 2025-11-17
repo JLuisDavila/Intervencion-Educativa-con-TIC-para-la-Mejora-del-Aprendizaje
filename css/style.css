@@ -420,3 +420,9 @@ a:hover {
     transform: scale(1.1); /* efecto zoom al pasar el mouse */
 }
 
+.pdf-container .pdf-viewer {
+    width: 100%;        /* ocupa todo el ancho */
+    height: 90vh;       /* casi toda la altura de la pantalla */
+    min-height: 600px;  /* asegura que no se vea demasiado pequeño en pantallas chicas */
+    border: 1px solid #ccc;
+}
