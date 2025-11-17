@@ -426,3 +426,20 @@ a:hover {
     min-height: 600px;  /* asegura que no se vea demasiado pequeño en pantallas chicas */
     border: 1px solid #ccc;
 }
+.pdf-container {
+    width: 100%;
+    max-width: 1200px; /* opcional, para no exceder ancho de pantalla */
+    margin: 2rem auto;
+}
+
+.pdf-section {
+    margin-bottom: 2rem;
+}
+
+.pdf-viewer {
+    width: 100% !important;     /* ocupa todo el ancho disponible */
+    height: 90vh !important;    /* casi toda la altura de la pantalla */
+    min-height: 800px !important; /* asegura que sea grande en pantallas pequeñas */
+    border: 1px solid #ccc;
+    display: block;             /* elimina efectos de flex/grid que reduzcan altura */
+}
