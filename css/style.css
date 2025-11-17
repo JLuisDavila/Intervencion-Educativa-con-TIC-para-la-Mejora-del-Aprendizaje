@@ -282,3 +282,23 @@ a:hover {
         background: #f7f2ff;
     }
 </style>
+
+.pdf-section {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.pdf-section .evidencia-titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: block;
+}
+
