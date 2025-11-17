@@ -256,3 +256,29 @@ a:hover {
     font-weight: 600;
     text-align: center;
 }
+<style>
+    table.definidas {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: #ffffff;
+        font-size: 0.95rem;
+    }
+
+    table.definidas th,
+    table.definidas td {
+        border: 2px solid #b28bff; /* Bordes más visibles */
+        padding: 8px 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    table.definidas th {
+        background: #e9ddff;
+        font-weight: bold;
+    }
+
+    table.definidas tr:nth-child(even) {
+        background: #f7f2ff;
+    }
+</style>
