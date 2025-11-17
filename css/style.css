@@ -320,3 +320,21 @@ a:hover {
     display: block !important;
     width: 100% !important;
 }
+/* SOLO afecta los PDF dentro de la sección Documentación de TERCERO */
+#documentacion .pdf-section {
+    width: 100% !important;
+    display: block !important;
+    margin: 30px 0 !important;
+}
+
+/* Evita que grids/flex de la página afecten a esa sección */
+#documentacion .pdf-section iframe {
+    width: 100% !important;
+    height: 500px !important;
+    display: block !important;
+}
+
+/* Evita que la galería simple convierta esos PDF en columnas */
+#documentacion .evidencias-galeria-simple {
+    display: block !important;
+}
