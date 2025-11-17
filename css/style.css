@@ -386,3 +386,18 @@ a:hover {
 .pdf-section * {
     grid-column: 1 / -1 !important;
 }
+/* ================= PDF SOLO ================= */
+.pdf-container .pdf-section {
+    margin: 2rem 0; /* separa cada PDF */
+}
+
+.pdf-container .evidencia-titulo {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.pdf-container .pdf-viewer {
+    width: 100%;        /* ocupa todo el ancho del contenedor */
+    height: 80vh;       /* altura visible grande */
+    border: 1px solid #ccc;
+}
