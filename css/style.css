@@ -401,3 +401,22 @@ a:hover {
     height: 80vh;       /* altura visible grande */
     border: 1px solid #ccc;
 }
+
+.evidencias-galeria-simple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 1rem; /* espacio entre imágenes */
+    margin-bottom: 1rem;
+}
+
+.evidencia-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.evidencia-item img.zoomable:hover {
+    transform: scale(1.1); /* efecto zoom al pasar el mouse */
+}
+
